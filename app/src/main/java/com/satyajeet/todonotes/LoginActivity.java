@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,10 +34,15 @@ public class LoginActivity extends AppCompatActivity {
                 final String full_name = editTextFullName.getText().toString();
                 final String user_name = editTextUserName.getText().toString();
 
-                Intent intent = new Intent(LoginActivity.this, MyNotesActivity.class);
-                intent.putExtra("full_name", full_name);
-                intent.putExtra("user_name", user_name);
-                startActivity(intent);
+                // To check if full_name and user_name != empty
+                if(!TextUtils.isEmpty(full_name) && !TextUtils.isEmpty(user_name)) {
+                    Intent intent = new Intent(LoginActivity.this, MyNotesActivity.class);
+                    intent.putExtra("full_name", full_name);
+                    intent.putExtra("user_name", user_name);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(LoginActivity.this, "Full Name and User Name are empty.",Toast.LENGTH_SHORT).show();
+                }
             }
         };
 
