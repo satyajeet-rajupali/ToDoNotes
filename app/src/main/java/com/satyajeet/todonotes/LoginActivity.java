@@ -26,12 +26,12 @@ public class LoginActivity extends AppCompatActivity {
 
         // OnClickListener interface for the loginButton.
         View.OnClickListener loginButtonListener = new View.OnClickListener() {
-
-            final String full_name = editTextFullName.getText().toString();
-            final String user_name = editTextFullName.getText().toString();
-
             @Override
             public void onClick(View v) {
+
+                final String full_name = editTextFullName.getText().toString();
+                final String user_name = editTextUserName.getText().toString();
+
                 Intent intent = new Intent(LoginActivity.this, MyNotesActivity.class);
                 intent.putExtra("full_name", full_name);
                 intent.putExtra("user_name", user_name);
