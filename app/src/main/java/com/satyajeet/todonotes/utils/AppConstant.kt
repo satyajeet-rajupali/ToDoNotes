@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.utils
 
 object AppConstant {
     const val FULL_NAME = "full_name"

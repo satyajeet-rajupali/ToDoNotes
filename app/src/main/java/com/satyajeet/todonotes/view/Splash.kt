@@ -1,10 +1,11 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.view
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import com.satyajeet.todonotes.utils.PrefsConstant
+import com.satyajeet.todonotes.R
 
 class Splash : AppCompatActivity() {
 

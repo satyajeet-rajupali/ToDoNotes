@@ -1,8 +1,10 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.view
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.satyajeet.todonotes.utils.AppConstant
+import com.satyajeet.todonotes.R
 
 class DetailsActivity : AppCompatActivity() {
 

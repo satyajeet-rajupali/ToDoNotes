@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoNotes">
 
-        <activity android:name=".Splash">
+        <activity android:name=".view.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DetailsActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MyNotesActivity"/>
+        <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.DetailsActivity"/>
+        <activity android:name=".view.LoginActivity"/>
+        <activity android:name=".view.MyNotesActivity"/>
     </application>
 
 </manifest>

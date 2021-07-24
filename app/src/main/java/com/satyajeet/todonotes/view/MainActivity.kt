@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.utils
 
 object PrefsConstant {
     const val SHARED_PREFERENCE_NAME = "notes_app_pref"

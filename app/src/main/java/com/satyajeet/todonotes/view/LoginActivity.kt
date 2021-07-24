@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes
+package com.satyajeet.todonotes.view
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -8,6 +8,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.satyajeet.todonotes.utils.AppConstant
+import com.satyajeet.todonotes.utils.PrefsConstant
+import com.satyajeet.todonotes.R
 import java.util.*
 
 class LoginActivity : AppCompatActivity() {
