@@ -12,16 +12,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.satyajeet.todonotes.Adapter.NotesAdapter
+import com.satyajeet.todonotes.NotesApp
 import com.satyajeet.todonotes.utils.AppConstant
 import com.satyajeet.todonotes.utils.PrefsConstant
 import com.satyajeet.todonotes.R
 import com.satyajeet.todonotes.clickListeners.ItemClickListener
-import com.satyajeet.todonotes.model.Notes
+import com.satyajeet.todonotes.db.Notes
 
-class MyNotesActivity : AppCompatActivity(){
+class MyNotesActivity : AppCompatActivity() {
 
-    private lateinit var full_name :  String
-    private lateinit var user_name :  String
+    private lateinit var full_name: String
+    private lateinit var user_name: String
     private lateinit var sharedPreferences: SharedPreferences
     private var notes_list = ArrayList<Notes>()
     private lateinit var recyclerView: RecyclerView
@@ -36,15 +37,23 @@ class MyNotesActivity : AppCompatActivity(){
 
         setUpSharedPreference()
         getIntentValues()
+        getDataFromDatabase()
+        setUpRecyclerView()
 
 
-        supportActionBar?.title = full_name
+        supportActionBar?.title = "Tasks"
 
         floatingActionButton.setOnClickListener { setUpDialogBox() }
     }
 
+    private fun getDataFromDatabase() {
+        val notesApp = applicationContext as NotesApp
+        val notesDao = notesApp.getNotesDb().notesDao()
+        notes_list.addAll(notesDao.getAll())
+    }
+
     private fun setUpDialogBox() {
-        val view = LayoutInflater.from(this@MyNotesActivity).inflate(R.layout.dailog1,null)
+        val view = LayoutInflater.from(this@MyNotesActivity).inflate(R.layout.dailog1, null)
         val editTextTitle = view.findViewById<EditText>(R.id.editTextTitle)
         val editTextDescription = view.findViewById<EditText>(R.id.editTextDescription)
         val button = view.findViewById<Button>(R.id.submit_button)
@@ -62,32 +71,39 @@ class MyNotesActivity : AppCompatActivity(){
             if (notes_title.isNotEmpty() && notes_description.isNotEmpty()) {
                 val notes = Notes(title = notes_title, description = notes_description)
                 notes_list.add(notes)
-                setUpRecyclerView()
+                addNotesToDB(notes)
             } else {
                 Toast.makeText(
                     this@MyNotesActivity,
                     "Title or Description is missing.",
                     Toast.LENGTH_SHORT
                 ).show()
-                val itemClickListener = object : ItemClickListener {
-                    override fun onClick(notes: Notes) {
-                        val intent = Intent(this@MyNotesActivity, DetailsActivity::class.java)
-                        intent.putExtra(AppConstant.TITLE, notes.title)
-                        intent.putExtra(AppConstant.DESCRIPTION, notes.description)
-                        startActivity(intent)
-                    }
-                }
+
+
             }
         }
     }
 
+    private fun addNotesToDB(notes: Notes) {
+        val notesApp = applicationContext as NotesApp
+        val notesDao = notesApp.getNotesDb().notesDao()
+        notesDao.insert(notes)
+    }
+
+
     private fun setUpRecyclerView() {
-        val itemClickListener = object : ItemClickListener{
+        val itemClickListener = object : ItemClickListener {
             override fun onClick(notes: Notes) {
                 val intent = Intent(this@MyNotesActivity, DetailsActivity::class.java)
                 intent.putExtra(AppConstant.TITLE, notes.title)
                 intent.putExtra(AppConstant.DESCRIPTION, notes.description)
                 startActivity(intent)
+            }
+
+            override fun onUpdate(notes: Notes) {
+                val notesApp = applicationContext as NotesApp
+                val notesDao = notesApp.getNotesDb().notesDao()
+                notesDao.updateNotes(notes)
             }
 
         }
@@ -96,10 +112,10 @@ class MyNotesActivity : AppCompatActivity(){
     }
 
     private fun getIntentValues() {
-       val intent = intent
+        val intent = intent
         full_name = intent.getStringExtra(AppConstant.FULL_NAME).toString()
         user_name = intent.getStringExtra(AppConstant.USER_NAME).toString()
-        if(full_name.isEmpty()){
+        if (full_name.isEmpty()) {
             full_name = sharedPreferences.getString(PrefsConstant.FULL_NAME, "").toString()
         }
 
