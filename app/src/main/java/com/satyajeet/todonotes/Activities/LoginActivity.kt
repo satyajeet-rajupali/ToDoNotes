@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes.view
+package com.satyajeet.todonotes.Activities
 
 import android.content.Intent
 import android.content.SharedPreferences
