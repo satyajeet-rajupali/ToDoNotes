@@ -1,4 +1,4 @@
-package com.satyajeet.todonotes.Activities
+package com.satyajeet.todonotes.activities
 
 import android.os.Bundle
 import android.widget.TextView

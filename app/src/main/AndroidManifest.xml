@@ -26,18 +26,18 @@
             </meta-data>
         </provider>
 
-        <activity android:name=".Activities.AddNotesActivity"></activity>
-        <activity android:name=".Activities.Splash">
+        <activity android:name=".activities.AddNotesActivity"></activity>
+        <activity android:name=".activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.DetailsActivity" />
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.MyNotesActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.DetailsActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MyNotesActivity" />
     </application>
 
 </manifest>

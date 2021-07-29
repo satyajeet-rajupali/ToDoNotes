@@ -5,4 +5,5 @@ object AppConstant {
     const val USER_NAME = "user_name"
     const val TITLE = "title"
     const val DESCRIPTION = "description"
+    const val IMAGE_PATH = "image_path"
 }

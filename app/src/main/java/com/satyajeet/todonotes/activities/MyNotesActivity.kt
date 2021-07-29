@@ -1,18 +1,13 @@
-package com.satyajeet.todonotes.Activities
+package com.satyajeet.todonotes.activities
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.satyajeet.todonotes.Adapter.NotesAdapter
+import com.satyajeet.todonotes.adapter.NotesAdapter
 import com.satyajeet.todonotes.NotesApp
 import com.satyajeet.todonotes.utils.AppConstant
 import com.satyajeet.todonotes.utils.PrefsConstant
@@ -103,10 +98,14 @@ class MyNotesActivity : AppCompatActivity() {
         if (requestCode == ADD_NOTES_CODE) {
             val title = data?.getStringExtra(AppConstant.TITLE)
             val description = data?.getStringExtra(AppConstant.DESCRIPTION)
+            val imagePath = data?.getStringExtra(AppConstant.IMAGE_PATH)
+
+            Log.d("Testing", "Image Path: " + imagePath)
+
 
             val notesApp = applicationContext as NotesApp
             val notesDao = notesApp.getNotesDb().notesDao()
-            val note = Notes(title = title!!, description = description!!)
+            val note = Notes(title = title!!, description = description!!, imagePath = imagePath!!)
             Log.d(TAG, "Title: $title")
             Log.d(TAG, "Description: $description")
 

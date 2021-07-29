@@ -20,7 +20,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/small_image"
             app:layout_constraintStart_toEndOf="@id/checkBoxMarkStatus"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,6 +47,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/notes_description"
             app:layout_constraintTop_toTopOf="@id/notes_title"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/small_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toTopOf="@id/notes_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/notes_description"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
