@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_blog.xml" value="0.23822463768115942" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_blog2.xml" value="0.23822463768115942" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_details.xml" value="0.12360688956433637" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_login.xml" value="0.12360688956433637" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.22916666666666666" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/blogs_layout.xml" value="0.23822463768115942" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/dailog1.xml" value="0.12360688956433637" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/fragment_on_boarding_one.xml" value="0.264" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/fragment_on_boarding_two.xml" value="0.22916666666666666" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/menu/menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/xml/network_security_configuration.xml" value="0.22916666666666666" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/xml/network_security_configurations.xml" value="0.22916666666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
@@ -9,7 +27,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.536" />
+        <option name="scale" value="0.264" />
       </ProjectState>
     </option>
   </component>

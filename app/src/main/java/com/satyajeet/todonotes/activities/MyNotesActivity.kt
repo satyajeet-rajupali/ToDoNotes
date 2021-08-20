@@ -4,8 +4,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import androidx.work.Constraints
+import androidx.work.PeriodicWorkRequest
+import androidx.work.WorkManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.satyajeet.todonotes.adapter.NotesAdapter
 import com.satyajeet.todonotes.NotesApp
@@ -14,6 +20,8 @@ import com.satyajeet.todonotes.utils.PrefsConstant
 import com.satyajeet.todonotes.R
 import com.satyajeet.todonotes.clickListeners.ItemClickListener
 import com.satyajeet.todonotes.db.Notes
+import com.satyajeet.todonotes.workManager.MyWorker
+import java.util.concurrent.TimeUnit
 
 class MyNotesActivity : AppCompatActivity() {
 
@@ -34,12 +42,22 @@ class MyNotesActivity : AppCompatActivity() {
         getIntentValues()
         getDataFromDatabase()
         setUpRecyclerView()
+        setUpWorkManager()
 
         supportActionBar?.title = "Tasks"
         floatingActionButton.setOnClickListener {
             val intent = Intent(this@MyNotesActivity, AddNotesActivity::class.java)
             startActivityForResult(intent, Companion.ADD_NOTES_CODE)
         }
+    }
+
+    private fun setUpWorkManager() {
+        val constraint = Constraints.Builder().build()
+        val request = PeriodicWorkRequest.Builder(MyWorker::class.java, 1, TimeUnit.MINUTES)
+            .setConstraints(constraint)
+            .build()
+
+        WorkManager.getInstance().enqueue(request)
     }
 
     private fun getDataFromDatabase() {
@@ -100,7 +118,7 @@ class MyNotesActivity : AppCompatActivity() {
             val description = data?.getStringExtra(AppConstant.DESCRIPTION)
             val imagePath = data?.getStringExtra(AppConstant.IMAGE_PATH)
 
-            Log.d("Testing", "Image Path: " + imagePath)
+            Log.d("Testing", "Image Path: $imagePath")
 
 
             val notesApp = applicationContext as NotesApp
@@ -116,5 +134,20 @@ class MyNotesActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.blogs) {
+//            Toast.makeText(this@MyNotesActivity, "Clicked", Toast.LENGTH_LONG).show();
+            val intent = Intent(this@MyNotesActivity, BlogActivity::class.java)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

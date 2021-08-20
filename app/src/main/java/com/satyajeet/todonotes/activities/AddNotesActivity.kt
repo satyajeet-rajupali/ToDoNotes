@@ -51,7 +51,7 @@ class AddNotesActivity : AppCompatActivity() {
             intent.putExtra(AppConstant.TITLE, title.text.toString())
             intent.putExtra(AppConstant.DESCRIPTION, description.text.toString())
             intent.putExtra(AppConstant.IMAGE_PATH, picturePath)
-            Log.d("Testing", "Image Path: " + picturePath)
+            Log.d("Testing", "Image Path: $picturePath")
             setResult(Activity.RESULT_OK, intent)
             finish()
         }
@@ -162,6 +162,7 @@ class AddNotesActivity : AppCompatActivity() {
     }
 
     private fun createImageFile(): File? {
+
         val timeStamp = SimpleDateFormat("yyyyMMddHHmmss").format(Date())
         val fileName = "JPEG_" + timeStamp + "_"
         val storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES)

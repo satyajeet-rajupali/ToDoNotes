@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var editTextUserName: EditText
     lateinit var loginButton: Button
     lateinit var sharedPreferences: SharedPreferences
-    lateinit var editor : SharedPreferences.Editor
+    lateinit var editor: SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,12 +31,12 @@ class LoginActivity : AppCompatActivity() {
 
         setUpSharedPrefernces()
 
-        val loginButtonListener = object: View.OnClickListener{
+        val loginButtonListener = object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val full_name  = editTextFullName.text.toString()
+                val full_name = editTextFullName.text.toString()
                 val user_name = editTextUserName.text.toString()
 
-                if(full_name.isNotEmpty() && user_name.isNotEmpty()){
+                if (full_name.isNotEmpty() && user_name.isNotEmpty()) {
                     val intent = Intent(this@LoginActivity, MyNotesActivity::class.java)
                     intent.putExtra(AppConstant.FULL_NAME, full_name)
                     intent.putExtra(AppConstant.USER_NAME, user_name)
@@ -45,8 +45,12 @@ class LoginActivity : AppCompatActivity() {
                     saveLoginStatus()
                     saveFullName(full_name)
 
-                } else{
-                    Toast.makeText(this@LoginActivity, "Full Name and User Name are empty.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Full Name and User Name are empty.",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                 }
             }
