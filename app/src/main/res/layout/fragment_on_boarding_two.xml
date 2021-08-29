@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light"
+    android:background="@android:color/white"
     tools:context=".onboarding.OnBoardingTwoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:text="You can add images with the tasks."
             android:textSize="20sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <Button
             android:id="@+id/textViewNextTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,6 +33,8 @@
             android:layout_marginBottom="8dp"
             android:text="Next"
             android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +42,7 @@
             app:layout_constraintHorizontal_bias="0.97"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
+        <Button
             android:id="@+id/textViewBackTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +52,8 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-
+            android:backgroundTint="@color/black"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.03"
@@ -58,12 +61,13 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="30dp"
-            android:src="@drawable/checklist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/ic_onboarding_two"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

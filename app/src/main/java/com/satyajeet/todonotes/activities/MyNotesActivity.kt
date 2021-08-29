@@ -1,25 +1,25 @@
 package com.satyajeet.todonotes.activities
 
+import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.work.Constraints
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.satyajeet.todonotes.adapter.NotesAdapter
 import com.satyajeet.todonotes.NotesApp
-import com.satyajeet.todonotes.utils.AppConstant
-import com.satyajeet.todonotes.utils.PrefsConstant
 import com.satyajeet.todonotes.R
+import com.satyajeet.todonotes.adapter.NotesAdapter
 import com.satyajeet.todonotes.clickListeners.ItemClickListener
 import com.satyajeet.todonotes.db.Notes
+import com.satyajeet.todonotes.utils.AppConstant
+import com.satyajeet.todonotes.utils.PrefsConstant
 import com.satyajeet.todonotes.workManager.MyWorker
 import java.util.concurrent.TimeUnit
 
@@ -113,7 +113,7 @@ class MyNotesActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == ADD_NOTES_CODE) {
+        if (requestCode == ADD_NOTES_CODE && resultCode == Activity.RESULT_OK) {
             val title = data?.getStringExtra(AppConstant.TITLE)
             val description = data?.getStringExtra(AppConstant.DESCRIPTION)
             val imagePath = data?.getStringExtra(AppConstant.IMAGE_PATH)

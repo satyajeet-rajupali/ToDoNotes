@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.satyajeet.todonotes.R
 import org.w3c.dom.Text
@@ -14,8 +15,8 @@ import org.w3c.dom.Text
 
 class OnBoardingTwoFragment : Fragment() {
 
-    lateinit var next: TextView
-    lateinit var back: TextView
+    lateinit var next: Button
+    lateinit var back: Button
     lateinit var onOptionClick: OnOptionClick
 
     override fun onAttach(context: Context) {

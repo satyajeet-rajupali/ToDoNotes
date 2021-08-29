@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="500"
+    android:viewportHeight="500">
+    <path
+        android:fillColor="#11209F"
+        android:fillType="evenOdd"
+        android:pathData="M250,0L250,0A250,250 0,0 1,500 250L500,250A250,250 0,0 1,250 500L250,500A250,250 0,0 1,0 250L0,250A250,250 0,0 1,250 0z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M216.423,167.041L216.75,166.714L249.275,199.276L281.658,166.856L281.658,166.714L327.598,166.714L327.598,333.206L281.658,333.206L281.658,232.245L248.723,265.217L216.423,232.881L216.423,333.206L170.483,333.206L170.483,166.714L216.423,166.714L216.423,167.041Z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#F5A623"
+        android:fillType="evenOdd"
+        android:pathData="M30,224.015L30,276.761L126.085,332.359L127,330.771L127,279.938L30.088,223.862L30,224.015Z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M127,167.153L127,219.899L30.915,275.497L30,273.909L30,223.076L126.912,167L127,167.153Z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#F5A623"
+        android:fillType="evenOdd"
+        android:pathData="M468,276.985L468,224.239L371.915,168.641L371,170.229L371,221.062L467.912,277.138L468,276.985Z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M371,333.847L371,281.101L467.085,225.503L468,227.091L468,277.924L371.088,334L371,333.847Z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+</vector>

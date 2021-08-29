@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -33,7 +34,7 @@ class AddNotesActivity : AppCompatActivity() {
     private lateinit var title: EditText
     private lateinit var description: EditText
     private lateinit var submitButton: MaterialButton
-    private lateinit var profileImage: CircleImageView
+    private lateinit var profileImage: ImageView
     var picturePath = ""
     lateinit var imageLocation: File
 
@@ -179,7 +180,7 @@ class AddNotesActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        finish()
+        setResult(Activity.RESULT_CANCELED)
     }
 
     companion object {

@@ -42,8 +42,10 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".activities.AddNotesActivity" />
-        <activity android:name=".activities.Splash">
+        <activity android:name=".activities.AddNotesActivity"
+            android:theme="@style/Theme.NoActionBar"/>
+        <activity android:name=".activities.Splash"
+            android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,7 +54,8 @@
         </activity>
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.DetailsActivity" />
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.LoginActivity"
+            android:theme="@style/Theme.NoActionBar"/>
         <activity android:name=".activities.MyNotesActivity" />
         <activity android:name=".activities.BlogActivity" />
     </application>

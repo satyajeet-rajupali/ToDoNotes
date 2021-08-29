@@ -3,11 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/background.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_add.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_camera_icon.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_checklist.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_gallery_icon.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_image_selector.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_logo.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_note_check.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_onboarding_one.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/drawable/ic_onboarding_two.xml" value="0.25462962962962965" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_add_notes.xml" value="0.4" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_blog.xml" value="0.23822463768115942" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_blog2.xml" value="0.23822463768115942" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_details.xml" value="0.12360688956433637" />
-        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_login.xml" value="0.12360688956433637" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_my_notes.xml" value="0.12360688956433637" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.22916666666666666" />
+        <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/activity_splash.xml" value="0.245018115942029" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/blogs_layout.xml" value="0.23822463768115942" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/dailog1.xml" value="0.12360688956433637" />
         <entry key="..\:/Projects/TodoApp/app/src/main/res/layout/fragment_on_boarding_one.xml" value="0.264" />
